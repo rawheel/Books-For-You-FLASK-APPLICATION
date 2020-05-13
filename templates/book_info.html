@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <ul>
+        <li>Title: {{ record.title }}</li><br>
+
+        <li>ISBN: {{ record.isbn }}</li><br>
+        <li>Author: {{ record.author }}</li><br>
+        <li>Year: {{ record.year }}</li><br>
+        <li>work_ratings_count: {{ work_ratings_count }}</li><br>
+        <li>average_rating: {{ average_rating }}</li><br>
+    </ul>
+    <div  class="reviewform" >
+        <h1>Review Section</h1>
+        <form method="POST" action="{{ url_for('review',isbn = record.isbn) }}" >
+          
+            <div class="container">
+                
+              <div class=form-group>
+                  <label for="ratings"><b>Ratings</b></label><br>
+                  <select class="form-control" name="ratings">
+                  {% for number1 in limits %}
+                    <option value="{{ number1 }}">{{ number1 }}</option>
+                  {% endfor %}
+                </select>
+              </div><br>
+
+              <label for="txtreview"><b>Review</b></label><br>
+              <input width="20" type="text" placeholder="Enter Review" name="txtreview" required><br>
+              <br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+
+              
+        
+          </form>
+        </div>
+    
+    
+</body>
+</html>

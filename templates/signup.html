@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <link href="static\css\file.css" rel="stylesheet">
+</head>
+<body>
+    <div class="formdiv">
+    
+    <form method='POST' action='' >
+        
+        <div class="imgcontainer">
+          
+          <img src="static\img\sign.png" class="avatar">
+        </div>
+      
+        <div class="container">
+          <label for="uemail"><b>Email</b></label><br>
+          <input type="text" placeholder="Enter your Email" name="uemail" required><br>
+            
+          <label for="uname"><b>Username</b></label><br>
+          <input type="text" placeholder="Enter Username" name="uname" required><br>
+      
+          <label for="psw"><b>Password</b></label><br>
+          <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+          <label for="repsw"><b>Confirm Password</b></label><br>
+          <input type="password" placeholder="Enter Password" name="repsw" required><br>
+      
+          <button type="submit">Get Registered</button><br>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label><br>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button><br>
+          
+          <span class="psw1">Go<a href="{{ url_for('index') }}">Back</a></span>
+        </div>
+    
+      </form>
+    </div>
+    
+</body>
+</html>

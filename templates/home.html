@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="static\css\homepage.css" rel="stylesheet">
+</head>
+<body>
+    <div class="logout">
+    <a  href="{{ url_for('index') }}">LogOut</a>
+    </div>
+    Hello, you are logged in successfully as {{ name }}!<br><br>
+
+    <div class="searchformdiv">
+    
+        <form method='POST' action="{{ url_for('search') }}" >
+          
+            <div class="searchcontainer">
+                
+              <label for="isbn"><b>ISBN No.</b></label><br>
+              <input type="text" placeholder="Enter ISBN" name="isbn" ><br>
+
+              <label for="title"><b>Book Title</b></label><br>
+              <input type="text" placeholder="Enter Title" name="title" ><br>
+              
+              <label for="author"><b>Author Name</b></label><br>
+              <input type="text" placeholder="Enter Author" name="author"><br>
+             </div> 
+
+            <div class = "searchcontainer">
+              <button type="submit" class="searchbtn">Search</button><br>
+            </div>
+          </form>
+        </div>
+    
+</body>
+</html>

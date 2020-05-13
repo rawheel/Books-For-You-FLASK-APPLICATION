@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>BOOKS RESULT</h1>
+    <ul>
+        {% for sel in sel_book %}
+            <li>
+                <a href = "{{ url_for('spec_book' , book_id=sel.id) }}">
+                    
+                {{ sel.title }}
+                    
+                </a>
+            </li>
+            {% endfor %}
+
+    </ul>
+    
+    
+</body>
+</html>
